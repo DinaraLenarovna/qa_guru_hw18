@@ -1,0 +1,2 @@
+INFO     root:methods.py:19 200
+INFO     root:methods.py:20 {"success":false,"message":["Manufacturer","Color"]}
