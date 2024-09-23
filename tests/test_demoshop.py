@@ -10,7 +10,10 @@ def test_add_phone_cover_to_cart(auth_with_api):
         browser.open('/')
 
     with allure.step('Проверка статуса добавления товара в корзину'):
-        response_code = add_product_to_cart(product_url='/addproducttocart/details/80/1', cookie=auth_with_api)
+        response_code = add_product_to_cart(product_url='/addproducttocart/details/80/1', cookie=auth_with_api, data={
+            'product_attribute_80_2_37': 112,
+            'product_attribute_80_1_38': 114
+        })
         assert response_code == 200
 
     with allure.step('Переход в корзину'):
